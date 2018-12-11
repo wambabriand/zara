@@ -1,0 +1,20 @@
+
+il y'a quatre files situés dans le directeur SRC
+
+MCE.sv
+MUX.sv
+MED.cv
+MEDIAN.sv
+
+il y'a un Makefile dans le directeur SIMULATION . les commandes sont
+les suivantes:
+
+make compile_all : pour tout compiler nos fichiers sources
+
+make recompile : permet de recompiler pour la question 4-5
+                MEDIAN et MEDIAN_IMAGE_tb
+
+
+4-)
+median.vo: contient notre code, mais une version plus optimisé
+Remarque : le temps de la simulation est un peut plus long

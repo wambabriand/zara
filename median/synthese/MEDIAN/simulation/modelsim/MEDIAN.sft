@@ -1,0 +1,5 @@
+set tool_name "MODELSIM (VERILOG HDL OUTPUT FROM QUARTUS II)"
+set corner_file_list {
+	{{"Slow Model"} {MEDIAN.vo MEDIAN_v.sdo}}
+	{{"Fast Model"} {MEDIAN_fast.vo MEDIAN_v_fast.sdo}}
+}

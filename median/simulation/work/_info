@@ -1,0 +1,239 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/cal/homes/bwamba/Desktop/SE204/median/simulation
+T_opt
+!s110 1544439070
+VoYI=hnmXSl^D[d1[BiaXX0
+Z1 04 9 4 work MEDIAN_tb fast 0
+=1-f8bc12a652b4-5c0e451d-384a8-2eb0
+o-quiet -auto_acc_if_foreign -work work -L cycloneii_ver
+Z2 tCvgOpt 0 Stats "none"
+n@_opt
+Z3 OL;O;10.7a;67
+R0
+T_opt1
+!s110 1544439567
+VPel^JO[_4H^amPOFEFkK10
+04 15 4 work MEDIAN_IMAGE_tb fast 0
+=1-f8bc12a652b4-5c0e470e-d463a-3078
+Z4 o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+T_opt2
+!s110 1544438640
+VmhRhe18Wcg2T3Gjgc78UA0
+R1
+=1-f8bc12a652b4-5c0e4370-65763-2af7
+R4
+R2
+n@_opt2
+R3
+R0
+vMCE
+Z5 DXx6 sv_std 3 std 0 22 >9az<^>2ff9DAl3OFGaAf1
+Z6 !s110 1544438572
+!i10b 1
+!s100 AliF7QU4Oj`aBPi0FVLbN3
+Ie_LRi:eaBDN2n2QE]m>o92
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+!s105 MCE_sv_unit
+S1
+R0
+w1544197649
+8../src/MCE.sv
+F../src/MCE.sv
+L0 3
+Z8 OL;L;10.7a;67
+r1
+!s85 0
+31
+Z9 !s108 1544438572.000000
+!s107 ../src/MCE.sv|
+!s90 +acc|../src/MCE.sv|
+!i113 0
+Z10 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+n@m@c@e
+vMCE_tb
+R5
+R6
+!i10b 1
+!s100 `^K81A646PI4NlP2iiCQ?2
+In2TNjN1l16CWSbQaEB8Y`1
+R7
+!s105 MCE_tb_sv_unit
+S1
+R0
+w1544389803
+8../src/MCE_tb.sv
+F../src/MCE_tb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 ../src/MCE_tb.sv|
+!s90 +acc|../src/MCE_tb.sv|
+!i113 0
+R10
+R11
+n@m@c@e_tb
+vMED
+R5
+R6
+!i10b 1
+!s100 Xk@[D`U?4UX5eoKhdeXkn0
+Iga8e`<gj4b:=Hl0iQg4ZW1
+R7
+!s105 MED_sv_unit
+S1
+R0
+w1544380403
+8../src/MED.sv
+F../src/MED.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 ../src/MED.sv|
+!s90 +acc|../src/MED.sv|
+!i113 0
+R10
+R11
+n@m@e@d
+vMED_tb
+R5
+R6
+!i10b 1
+!s100 T@C[Z2[oEif?99caJ9ORN0
+IX_1jN>@jY10V6kM3M;c5`0
+R7
+!s105 MED_tb_sv_unit
+S1
+R0
+w1544390089
+8../src/MED_tb.sv
+F../src/MED_tb.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 ../src/MED_tb.sv|
+!s90 +acc|../src/MED_tb.sv|
+!i113 0
+R10
+R11
+n@m@e@d_tb
+vMEDIAN
+R5
+!s110 1544439475
+!i10b 1
+!s100 :<YB71VQ]b;NKk<kT1F]J0
+I?l::RVPnPfHhTBkTUARA83
+R7
+!s105 MEDIAN_sv_unit
+S1
+R0
+w1544438394
+8../src/MEDIAN.sv
+F../src/MEDIAN.sv
+L0 2
+R8
+r1
+!s85 0
+31
+Z12 !s108 1544439475.000000
+!s107 ../src/MEDIAN.sv|
+!s90 +acc|../src/MEDIAN.sv|
+!i113 0
+R10
+R11
+n@m@e@d@i@a@n
+vMEDIAN_IMAGE_tb
+R5
+!s110 1544439476
+!i10b 1
+!s100 b7XYM9CG?H<]kk4Km31eT1
+I:G<[j]N7]cJT];j3[4gZ70
+R7
+!s105 MEDIAN_IMAGE_tb_sv_unit
+S1
+R0
+w1544439182
+8../src/MEDIAN_IMAGE_tb.sv
+F../src/MEDIAN_IMAGE_tb.sv
+L0 8
+R8
+r1
+!s85 0
+31
+R12
+!s107 ../src/MEDIAN_IMAGE_tb.sv|
+!s90 +acc|../src/MEDIAN_IMAGE_tb.sv|
+!i113 0
+R10
+R11
+n@m@e@d@i@a@n_@i@m@a@g@e_tb
+vMEDIAN_tb
+R5
+R6
+!i10b 1
+!s100 E6R425BllHZ=B;`9blVf>0
+I^`cQRan<iacSFlX@Q]LVd2
+R7
+!s105 MEDIAN_tb_sv_unit
+S1
+R0
+w1544366359
+8../src/MEDIAN_tb.sv
+F../src/MEDIAN_tb.sv
+L0 11
+R8
+r1
+!s85 0
+31
+R9
+!s107 ../src/MEDIAN_tb.sv|
+!s90 +acc|../src/MEDIAN_tb.sv|
+!i113 0
+R10
+R11
+n@m@e@d@i@a@n_tb
+vMUX
+R5
+R6
+!i10b 1
+!s100 [:zOh0a8IXWkQalOR[VYm0
+IYg7QcWjcm<zIjMlV9:XWh0
+R7
+!s105 MUX_sv_unit
+S1
+R0
+w1544370812
+8../src/MUX.sv
+F../src/MUX.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 ../src/MUX.sv|
+!s90 +acc|../src/MUX.sv|
+!i113 0
+R10
+R11
+n@m@u@x

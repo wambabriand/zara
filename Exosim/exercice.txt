@@ -1,0 +1,28 @@
+
+
+   m.a.j		   m.a.j	        m.a.j	m.a.j
+
+    -	     0ns    10ns    20ns    21ns  22ns	 37ns	 38ns 	
+
+   init      D0      -       -      D1	   -     D3	  -
+
+    -	     P1	     -	     -      P2	   -     P3       -     
+
+   H(x,x)   (x,0)  (x,1)   (1,1)    -  	 (1,1)	  -     (1,1)
+   D(0,0)     -    (0,0)   (0,0)    -	 (0,0)	(0,1)   (1,1)
+   Q(x,x)     -    (x,x)   (x,x)  (x,0)  (0,0)    -     (0,0)
+
+
+Je suppose que la valeur initiale de D vaut (0,0) . 
+
+Au début nous avons notre clock qui dèclanche le processus P1 à la fin du processus P1,
+H est modifié et declanche ainsi le processus P2. à la fin du processus p2 la valeur 
+de Q change et déclanche ainsi le processus P3. 
+
+Apres le processus P3 nous allons attendre le prochain clock pour declancher à nouveau le 
+processus P0,et le cicle va ainsi continuer...
+
+Hypothese: le clock declanche la procedure P1 juste une seule fois. 
+
+
+

@@ -1,0 +1,4 @@
+work "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MCE.sv" -sv2009
+work "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv" -sv2009
+work "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MUX.sv" -sv2009
+work "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MEDIAN.sv" -sv2009

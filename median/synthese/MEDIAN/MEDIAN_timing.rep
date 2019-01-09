@@ -1,0 +1,100 @@
+//  Precision RTL Synthesis 64-bit 2017.1.0.15 (Production Release) Fri Sep 15 05:07:37 PDT 2017
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2017, All Rights Reserved.
+//             Portions copyright 1991-2008 Compuware Corporation
+//                       UNPUBLISHED, LICENSED SOFTWARE.
+//            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+//  
+//  Running on Linux bwamba@c126-25 #1 SMP Debian 4.9.130-2 (2018-10-27) 4.9.0-8-amd64 x86_64
+//  
+//  Start time Mon Dec 10 11:46:51 2018
+
+-- Device: Altera - Cyclone II : EP2C35F672C : 8
+-- CTE report summary..
+-- POST-SYNTHESIS TIMING REPORTS ARE ESTIMATES AND SHOULD NOT BE RELIED ON TO MAKE QoR DECISIONS. For accurate timing information, please run place-and-route (P&R) and review P&R generated timing reports.
+
+================================================================================================
+                   Clock Frequency Report
+
+	Domain                  Clock Name                            Min Period (Freq)             Required Period (Freq)
+	------                  ----------                            -----------------             ----------------------
+	ClockDomain0            CLK                                   4.259 (234.797 MHz)           20.000 (50.000 MHz)
+
+
+================================================================================================
+Setup Timing Analysis of CLK
+
+Setup Slack Path Summary
+
+               Data                                                                             Data
+       Setup   Path   Source  Dest.                                                             End 
+Index  Slack   Delay  Clock   Clock         Data Start Pin                 Data End Pin         Edge
+-----  ------  -----  ------  -----  -----------------------------  --------------------------  ----
+  1    15.741  3.404  CLK     CLK    modgen_counter_i_reg_q(3)/clk  reg_state(7)/ena            Rise
+  2    15.754  3.391  CLK     CLK    reg_counter(3)/clk             reg_state(7)/ena            Rise
+  3    15.938  3.207  CLK     CLK    reg_counter(1)/clk             reg_state(7)/ena            Rise
+  4    15.965  3.180  CLK     CLK    reg_counter(0)/clk             reg_state(7)/ena            Rise
+  5    16.139  3.006  CLK     CLK    modgen_counter_i_reg_q(1)/clk  reg_state(7)/ena            Rise
+  6    16.140  3.005  CLK     CLK    modgen_counter_i_reg_q(2)/clk  reg_state(7)/ena            Rise
+  7    16.160  2.985  CLK     CLK    reg_state(6)/clk               reg_state(7)/ena            Rise
+  8    16.167  2.978  CLK     CLK    reg_state(5)/clk               reg_state(7)/ena            Rise
+  9    16.254  2.891  CLK     CLK    I_MED_MUX_2_reg_OUT(0)/clk     I_MED_MUX_2_reg_OUT(7)/ena  Rise
+ 10    16.283  2.862  CLK     CLK    modgen_counter_i_reg_q(0)/clk  reg_state(7)/ena            Rise
+
+                  CTE Path Report
+
+
+Critical path #1, (path slack = 15.741):
+
+SOURCE CLOCK: name: CLK period: 20.000000
+     Times are relative to the 1st rising edge
+  DEST CLOCK: name: CLK period: 20.000000
+     Times are relative to the 2nd rising edge
+
+NAME                                GATE                     DELAY    ARRIVAL DIR  FANOUT
+modgen_counter_i_reg_q(3)/clk    cycloneii_lcell_ff                   0.000   up
+modgen_counter_i_reg_q(3)/regout cycloneii_lcell_ff         0.000     0.000   up
+i(3)                             (net)                      0.350                   5
+ix23427z52927/datab              cycloneii_lcell_comb                 0.350   up
+ix23427z52927/combout            cycloneii_lcell_comb       0.624     0.974   up
+nx23427z5                        (net)                      0.270                   1
+ix23427z52926/datac              cycloneii_lcell_comb                 1.244   up
+ix23427z52926/combout            cycloneii_lcell_comb       0.370     1.614   up
+nx23427z4                        (net)                      0.350                   5
+ix27527z52924/datac              cycloneii_lcell_comb                 1.964   up
+ix27527z52924/combout            cycloneii_lcell_comb       0.370     2.334   up
+nx27527z2                        (net)                      0.290                   2
+ix27527z52923/datac              cycloneii_lcell_comb                 2.624   up
+ix27527z52923/combout            cycloneii_lcell_comb       0.370     2.994   up
+nx27527z1                        (net)                      0.410                   8
+reg_state(7)/ena                 cycloneii_lcell_ff                   3.404   up
+
+		Initial edge separation:     20.000
+		Source clock delay:      -    0.000
+		Dest clock delay:        +    0.000
+		                        -----------
+		Edge separation:             20.000
+		Setup constraint:        -    0.855
+		                        -----------
+		Data required time:          19.145
+		Data arrival time:       -    3.404   ( 50.94% cell delay, 49.06% net delay )
+		                        -----------
+		Slack:                       15.741
+
+
+
+================================================================================================
+                   Input Delay Report
+
+	Input                  Clock Name                            Slack (ns)
+	-----                  ----------                            ----------
+	No input delay constraints.
+
+
+================================================================================================
+                   Output Delay Report
+
+	Output                 Clock Name                            Slack (ns)
+	------                 ----------                            ----------
+	No output delay constraints.

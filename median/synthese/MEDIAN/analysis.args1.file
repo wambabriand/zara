@@ -1,0 +1,17 @@
+8:-out_dir
+64:/cal/homes/bwamba/Desktop/SE204/median/synthese/MEDIAN//rtlc.out
+10:-pipe_flow
+4:-svf
+81:/cal/homes/bwamba/Desktop/SE204/median/synthese/MEDIAN//hdlAnalyze_sysverilogfile
+2:-v
+88:/comelec/softs/opt/mentor/precision/current/Mgc_home/pkgs/rtlc_psr/rtlc/lib/altera_lpm.v
+2:-v
+87:/comelec/softs/opt/mentor/precision/current/Mgc_home/pkgs/rtlc_psr/rtlc/lib/altera_mf.v
+2:-v
+91:/comelec/softs/opt/mentor/precision/current/Mgc_home/pkgs/rtlc_psr/rtlc/lib/altera_lnsim.sv
+25:-comment_transoff_regions
+13:-lib_map_file
+64:/cal/homes/bwamba/Desktop/SE204/median/synthese/MEDIAN//.jaguarc
+7:-sv2009
+98:+incdir+/cal/homes/bwamba/Desktop/SE204/median/src+/cal/homes/bwamba/Desktop/SE204/median/synthese
+17:+define+synthesis

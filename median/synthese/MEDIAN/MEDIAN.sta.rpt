@@ -1,0 +1,1421 @@
+TimeQuest Timing Analyzer report for MEDIAN
+Mon Dec 10 11:47:28 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'CLK'
+ 13. Slow Model Hold: 'CLK'
+ 14. Slow Model Minimum Pulse Width: 'CLK'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLK'
+ 25. Fast Model Hold: 'CLK'
+ 26. Fast Model Minimum Pulse Width: 'CLK'
+ 27. Setup Times
+ 28. Hold Times
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Setup Transfers
+ 37. Hold Transfers
+ 38. Report TCCS
+ 39. Report RSKM
+ 40. Unconstrained Paths
+ 41. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; MEDIAN                                                             ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C35F672C8                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------+
+; SDC File List                                                  ;
++----------------------------+--------+--------------------------+
+; SDC File Path              ; Status ; Read at                  ;
++----------------------------+--------+--------------------------+
+; MEDIAN_pnr_constraints.sdc ; OK     ; Mon Dec 10 11:47:27 2018 ;
++----------------------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 144.61 MHz ; 144.61 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; 13.085 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; CLK   ; 6.933 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                                                                  ;
++--------+-------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 13.085 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.966      ;
+; 13.088 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.963      ;
+; 13.280 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.771      ;
+; 13.367 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.600      ;
+; 13.370 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.597      ;
+; 13.412 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.639      ;
+; 13.415 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.636      ;
+; 13.469 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.498      ;
+; 13.472 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.495      ;
+; 13.562 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.405      ;
+; 13.574 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.477      ;
+; 13.587 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.464      ;
+; 13.607 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.444      ;
+; 13.617 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.350      ;
+; 13.620 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.347      ;
+; 13.664 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.303      ;
+; 13.812 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.155      ;
+; 13.816 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.151      ;
+; 13.819 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.148      ;
+; 13.825 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.226      ;
+; 13.828 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.223      ;
+; 13.856 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.111      ;
+; 13.869 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.098      ;
+; 13.893 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.158      ;
+; 13.901 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.150      ;
+; 13.902 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.149      ;
+; 13.914 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.137      ;
+; 13.958 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 6.009      ;
+; 13.961 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.090      ;
+; 13.971 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.996      ;
+; 14.011 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.956      ;
+; 14.020 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 6.031      ;
+; 14.085 ; ix57580z49990|auto_generated|altsyncram4|q_b[3] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.882      ;
+; 14.088 ; ix57580z49990|auto_generated|altsyncram4|q_b[3] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.879      ;
+; 14.106 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.861      ;
+; 14.108 ; i[0]                                            ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.108 ; i[0]                                            ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.933      ;
+; 14.119 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.848      ;
+; 14.160 ; ix57580z49990|auto_generated|altsyncram4|q_b[1] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.807      ;
+; 14.163 ; ix57580z49990|auto_generated|altsyncram4|q_b[1] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.804      ;
+; 14.175 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.792      ;
+; 14.184 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.783      ;
+; 14.186 ; counter[3]                                      ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.186 ; counter[3]                                      ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.855      ;
+; 14.203 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.764      ;
+; 14.206 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.761      ;
+; 14.214 ; counter[1]                                      ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.214 ; counter[1]                                      ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.827      ;
+; 14.220 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.831      ;
+; 14.229 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.822      ;
+; 14.243 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.724      ;
+; 14.275 ; I_MED_MUX_2_reg_OUT_2_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.776      ;
+; 14.277 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.690      ;
+; 14.278 ; I_MED_MUX_2_reg_OUT_2_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.773      ;
+; 14.280 ; ix57580z49990|auto_generated|altsyncram4|q_b[3] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.687      ;
+; 14.286 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.681      ;
+; 14.288 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.763      ;
+; 14.305 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.662      ;
+; 14.314 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.737      ;
+; 14.316 ; I_MED_MUX_2_reg_OUT_3_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.735      ;
+; 14.318 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.649      ;
+; 14.319 ; I_MED_MUX_2_reg_OUT_3_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.732      ;
+; 14.327 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.097      ; 5.724      ;
+; 14.338 ; ix57580z49990|auto_generated|altsyncram4|q_b[7] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.629      ;
+; 14.341 ; ix57580z49990|auto_generated|altsyncram4|q_b[7] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.626      ;
+; 14.345 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.622      ;
+; 14.346 ; i[3]                                            ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.346 ; i[3]                                            ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.695      ;
+; 14.355 ; ix57580z49990|auto_generated|altsyncram4|q_b[1] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.612      ;
+; 14.398 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.013      ; 5.569      ;
+; 14.417 ; i[1]                                            ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
+; 14.417 ; i[1]                                            ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
+; 14.417 ; i[1]                                            ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
+; 14.417 ; i[1]                                            ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
+; 14.417 ; i[1]                                            ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
+; 14.417 ; i[1]                                            ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 5.624      ;
++--------+-------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                                   ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; i[0]                                            ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; i[1]                                            ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; i[2]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; nx56583z2                                       ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; reg_DSO                                         ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.760 ; state[5]                                        ; state[6]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.763 ; state[7]                                        ; nx28524z1                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.069      ;
+; 0.771 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.077      ;
+; 0.781 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[1]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.087      ;
+; 0.781 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[0]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.087      ;
+; 0.784 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.090      ;
+; 0.912 ; state[6]                                        ; state[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.218      ;
+; 0.914 ; state[2]                                        ; state[3]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.220      ;
+; 0.936 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|dffe3a[1]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.242      ;
+; 0.938 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.244      ;
+; 0.957 ; ix57580z49990|auto_generated|dffe3a[2]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.137      ; 1.361      ;
+; 0.957 ; ix57580z49990|auto_generated|dffe3a[0]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.137      ; 1.361      ;
+; 0.996 ; state[5]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.301      ;
+; 1.000 ; state[5]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.305      ;
+; 1.001 ; state[5]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.306      ;
+; 1.009 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.094      ; 1.370      ;
+; 1.011 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.094      ; 1.372      ;
+; 1.015 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.094      ; 1.376      ;
+; 1.072 ; state[2]                                        ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.377      ;
+; 1.077 ; state[4]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.382      ;
+; 1.078 ; state[2]                                        ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.383      ;
+; 1.181 ; state[6]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.486      ;
+; 1.186 ; ix57580z49990|auto_generated|altsyncram4|q_b[3] ; I_MED_MUX_2_reg_OUT_3_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.408      ;
+; 1.199 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.505      ;
+; 1.202 ; state[3]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.507      ;
+; 1.202 ; state[3]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.507      ;
+; 1.204 ; state[4]                                        ; state[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.204 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.205 ; state[1]                                        ; state[2]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.511      ;
+; 1.210 ; i[1]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.516      ;
+; 1.226 ; state[3]                                        ; state[4]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.233 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.539      ;
+; 1.235 ; state[6]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.540      ;
+; 1.260 ; i[0]                                            ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.566      ;
+; 1.267 ; nx28524z1                                       ; state[1]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.573      ;
+; 1.274 ; i[0]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.580      ;
+; 1.279 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; I_MED_MUX_2_reg_OUT_6_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.501      ;
+; 1.286 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; I_MED_MUX_2_reg_OUT_1_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.508      ;
+; 1.286 ; ix57580z49990|auto_generated|altsyncram4|q_b[1] ; I_MED_MUX_2_reg_OUT_5_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.508      ;
+; 1.410 ; state[3]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.715      ;
+; 1.436 ; state[4]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.741      ;
+; 1.508 ; state[3]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.813      ;
+; 1.519 ; ix57580z49990|auto_generated|dffe3a[1]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.137      ; 1.923      ;
+; 1.555 ; state[4]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.860      ;
+; 1.560 ; i[0]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.866      ;
+; 1.621 ; ix57580z49990|auto_generated|altsyncram4|q_b[7] ; I_MED_MUX_2_reg_OUT_7_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.843      ;
+; 1.649 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; I_MED_MUX_2_reg_OUT_0_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.871      ;
+; 1.669 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; I_MED_MUX_2_reg_OUT_2_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.891      ;
+; 1.682 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.988      ;
+; 1.694 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; I_MED_MUX_2_reg_OUT_4_                                                   ; CLK          ; CLK         ; 0.000        ; -0.084     ; 1.916      ;
+; 1.713 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.019      ;
+; 1.717 ; state[2]                                        ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.022      ;
+; 1.719 ; state[2]                                        ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.024      ;
+; 1.724 ; i[1]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.030      ;
+; 1.753 ; state[7]                                        ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.059      ;
+; 1.768 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.074      ;
+; 1.880 ; nx28524z1                                       ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.185      ;
+; 1.881 ; nx28524z1                                       ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.186      ;
+; 1.963 ; i[2]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.269      ;
+; 2.037 ; i[3]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.343      ;
+; 2.048 ; state[7]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.353      ;
+; 2.048 ; state[7]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.353      ;
+; 2.048 ; state[7]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.353      ;
+; 2.048 ; state[7]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.353      ;
+; 2.106 ; state[1]                                        ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.412      ;
+; 2.130 ; nx28524z1                                       ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.436      ;
+; 2.135 ; i[3]                                            ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.442      ;
+; 2.274 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ; CLK          ; CLK         ; 0.000        ; 0.097      ; 2.638      ;
+; 2.296 ; counter[3]                                      ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.603      ;
+; 2.339 ; nx28524z1                                       ; state[3]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; state[4]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; state[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; state[6]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; state[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; nx28524z1                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.339 ; nx28524z1                                       ; state[2]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.645      ;
+; 2.400 ; nx28524z1                                       ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 2.690      ;
+; 2.414 ; state[1]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.719      ;
+; 2.414 ; state[1]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.719      ;
+; 2.414 ; state[1]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.719      ;
+; 2.414 ; state[1]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.719      ;
+; 2.535 ; i[3]                                            ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.015     ; 2.826      ;
+; 2.539 ; i[2]                                            ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.846      ;
+; 2.595 ; state[1]                                        ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.900      ;
+; 2.595 ; state[1]                                        ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.900      ;
+; 2.595 ; state[1]                                        ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.900      ;
+; 2.595 ; state[1]                                        ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.900      ;
+; 2.696 ; counter[3]                                      ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.015     ; 2.987      ;
+; 2.744 ; state[7]                                        ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 3.034      ;
+; 2.788 ; nx28524z1                                       ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 3.093      ;
+; 2.790 ; nx28524z1                                       ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 3.095      ;
+; 2.806 ; state[7]                                        ; state[3]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.112      ;
+; 2.806 ; state[7]                                        ; state[4]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.112      ;
+; 2.806 ; state[7]                                        ; state[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.112      ;
+; 2.806 ; state[7]                                        ; state[6]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.112      ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                                                    ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                   ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                          ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                          ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a1~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a1~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a2~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a2~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a3~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a3~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a4~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a4~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a5~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a5~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a6~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a6~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a7~porta_memory_reg0  ;
+; 6.933 ; 10.000       ; 3.067          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a7~porta_memory_reg0  ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_0_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_0_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_1_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_1_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_2_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_2_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_3_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_3_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_4_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_4_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_5_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_5_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_6_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_6_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_7_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_7_                                                   ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; counter[0]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; counter[0]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; counter[1]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; counter[1]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; counter[2]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; counter[2]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; counter[3]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; counter[3]                                                               ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; i[0]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; i[0]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; i[1]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; i[1]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; i[2]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; i[2]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; i[3]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; i[3]                                                                     ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ;
+; 8.758 ; 10.000       ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|dffe3a[0]                                   ;
+; 8.758 ; 10.000       ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|dffe3a[0]                                   ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DI[*]     ; CLK        ; 5.972 ; 5.972 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; 2.349 ; 2.349 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; 5.649 ; 5.649 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; 5.571 ; 5.571 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; 5.877 ; 5.877 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; 5.949 ; 5.949 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; 5.552 ; 5.552 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; 5.883 ; 5.883 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; 5.972 ; 5.972 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; 3.736 ; 3.736 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; 1.251 ; 1.251 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DI[*]     ; CLK        ; -2.036 ; -2.036 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; -2.036 ; -2.036 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; -5.336 ; -5.336 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; -5.258 ; -5.258 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; -5.564 ; -5.564 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; -5.636 ; -5.636 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; -5.239 ; -5.239 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; -5.570 ; -5.570 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; -5.659 ; -5.659 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; -1.866 ; -1.866 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; -0.880 ; -0.880 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 8.546 ; 8.546 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 8.561 ; 8.561 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 8.548 ; 8.548 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 8.559 ; 8.559 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 8.537 ; 8.537 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 8.159 ; 8.159 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 8.158 ; 8.158 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 8.155 ; 8.155 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 8.158 ; 8.158 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 8.546 ; 8.546 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 8.561 ; 8.561 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 8.548 ; 8.548 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 8.559 ; 8.559 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 8.537 ; 8.537 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 8.159 ; 8.159 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 8.158 ; 8.158 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 8.155 ; 8.155 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; 17.540 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; CLK   ; 7.873 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                                                                                           ;
++--------+--------------------------------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                ; To Node                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a1~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a2~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a3~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a4~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a5~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a6~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.540 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7  ; ix57580z49990|auto_generated|altsyncram4|ram_block5a7~porta_memory_reg0 ; CLK          ; CLK         ; 20.000       ; -0.017     ; 2.442      ;
+; 17.907 ; I_MED_MUX_2_reg_OUT_6_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.157      ;
+; 17.909 ; I_MED_MUX_2_reg_OUT_6_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.155      ;
+; 17.942 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 2.072      ;
+; 17.944 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 2.070      ;
+; 17.951 ; I_MED_MUX_2_reg_OUT_6_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.113      ;
+; 17.986 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 2.028      ;
+; 17.988 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 2.026      ;
+; 17.990 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 2.024      ;
+; 18.002 ; I_MED_MUX_2_reg_OUT_0_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.062      ;
+; 18.004 ; I_MED_MUX_2_reg_OUT_0_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.060      ;
+; 18.016 ; I_MED_MUX_2_reg_OUT_6_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.048      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.019 ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                         ; CLK          ; CLK         ; 20.000       ; -0.020     ; 1.960      ;
+; 18.024 ; I_MED_MUX_2_reg_OUT_6_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.040      ;
+; 18.032 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.982      ;
+; 18.046 ; I_MED_MUX_2_reg_OUT_0_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 2.018      ;
+; 18.047 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.967      ;
+; 18.049 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.965      ;
+; 18.051 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.963      ;
+; 18.059 ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.955      ;
+; 18.061 ; i[0]                                                                     ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.061 ; i[0]                                                                     ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.972      ;
+; 18.085 ; counter[3]                                                               ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.085 ; counter[3]                                                               ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.948      ;
+; 18.086 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.928      ;
+; 18.088 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.926      ;
+; 18.091 ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.923      ;
+; 18.097 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.917      ;
+; 18.103 ; counter[1]                                                               ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.103 ; counter[1]                                                               ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.930      ;
+; 18.105 ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.909      ;
+; 18.111 ; I_MED_MUX_2_reg_OUT_0_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 1.953      ;
+; 18.119 ; I_MED_MUX_2_reg_OUT_0_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 1.945      ;
+; 18.126 ; I_MED_MUX_2_reg_OUT_1_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 1.938      ;
+; 18.128 ; I_MED_MUX_2_reg_OUT_1_                                                   ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4 ; CLK          ; CLK         ; 20.000       ; 0.065      ; 1.936      ;
+; 18.128 ; i[3]                                                                     ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.128 ; i[3]                                                                     ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.905      ;
+; 18.130 ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7 ; CLK          ; CLK         ; 20.000       ; 0.015      ; 1.884      ;
+; 18.145 ; i[1]                                                                     ; state[3]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[4]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[5]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[6]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[7]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; nx28524z1                                                               ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[1]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
+; 18.145 ; i[1]                                                                     ; state[2]                                                                ; CLK          ; CLK         ; 20.000       ; 0.001      ; 1.888      ;
++--------+--------------------------------------------------------------------------+-------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                                   ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; i[0]                                            ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i[1]                                            ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i[2]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; nx56583z2                                       ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; reg_DSO                                         ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.247 ; state[5]                                        ; state[6]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.251 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.257 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[1]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.260 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.268 ; state[7]                                        ; nx28524z1                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.420      ;
+; 0.275 ; ix57580z49990|auto_generated|dffe3a[2]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.479      ;
+; 0.275 ; ix57580z49990|auto_generated|dffe3a[0]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.479      ;
+; 0.281 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.481      ;
+; 0.281 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|dffe3a[0]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.433      ;
+; 0.282 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.482      ;
+; 0.283 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.062      ; 0.483      ;
+; 0.298 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|dffe3a[1]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.450      ;
+; 0.300 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.452      ;
+; 0.329 ; state[5]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.480      ;
+; 0.329 ; state[5]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.480      ;
+; 0.330 ; state[6]                                        ; state[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.330 ; state[5]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.481      ;
+; 0.332 ; state[2]                                        ; state[3]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.484      ;
+; 0.338 ; state[4]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.489      ;
+; 0.339 ; state[2]                                        ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.490      ;
+; 0.340 ; state[2]                                        ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.491      ;
+; 0.371 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; ix57580z49990|auto_generated|cntr1|safe_q[2]    ; ix57580z49990|auto_generated|dffe3a[2]                                   ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.376 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; state[6]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.528      ;
+; 0.384 ; state[6]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.535      ;
+; 0.389 ; i[1]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.541      ;
+; 0.391 ; state[3]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.542      ;
+; 0.391 ; state[3]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.542      ;
+; 0.397 ; nx28524z1                                       ; state[1]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.549      ;
+; 0.397 ; i[0]                                            ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.549      ;
+; 0.406 ; i[0]                                            ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.558      ;
+; 0.409 ; state[1]                                        ; state[2]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.561      ;
+; 0.411 ; state[4]                                        ; state[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.563      ;
+; 0.420 ; state[3]                                        ; state[4]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.572      ;
+; 0.453 ; ix57580z49990|auto_generated|altsyncram4|q_b[3] ; I_MED_MUX_2_reg_OUT_3_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.555      ;
+; 0.459 ; ix57580z49990|auto_generated|dffe3a[1]          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.663      ;
+; 0.464 ; state[3]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.615      ;
+; 0.466 ; state[3]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.617      ;
+; 0.468 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; I_MED_MUX_2_reg_OUT_6_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.570      ;
+; 0.469 ; ix57580z49990|auto_generated|altsyncram4|q_b[1] ; I_MED_MUX_2_reg_OUT_5_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.571      ;
+; 0.470 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; I_MED_MUX_2_reg_OUT_1_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.572      ;
+; 0.470 ; state[4]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.621      ;
+; 0.474 ; state[4]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.625      ;
+; 0.509 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.516 ; ix57580z49990|auto_generated|cntr1|safe_q[1]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.521 ; i[0]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.673      ;
+; 0.531 ; state[7]                                        ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.544 ; ix57580z49990|auto_generated|cntr1|safe_q[0]    ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.563 ; state[2]                                        ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.714      ;
+; 0.564 ; ix57580z49990|auto_generated|altsyncram4|q_b[7] ; I_MED_MUX_2_reg_OUT_7_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.666      ;
+; 0.565 ; i[1]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566 ; state[2]                                        ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.717      ;
+; 0.579 ; ix57580z49990|auto_generated|altsyncram4|q_b[6] ; I_MED_MUX_2_reg_OUT_0_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.681      ;
+; 0.583 ; nx28524z1                                       ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.734      ;
+; 0.590 ; nx28524z1                                       ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.741      ;
+; 0.591 ; ix57580z49990|auto_generated|altsyncram4|q_b[4] ; I_MED_MUX_2_reg_OUT_2_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.693      ;
+; 0.602 ; ix57580z49990|auto_generated|altsyncram4|q_b[2] ; I_MED_MUX_2_reg_OUT_4_                                                   ; CLK          ; CLK         ; 0.000        ; -0.050     ; 0.704      ;
+; 0.621 ; state[1]                                        ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.629 ; i[2]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.781      ;
+; 0.639 ; i[3]                                            ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.792      ;
+; 0.648 ; i[3]                                            ; i[3]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.657 ; I_MED_MUX_2_reg_OUT_6_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.860      ;
+; 0.665 ; nx28524z1                                       ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.685 ; counter[3]                                      ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.838      ;
+; 0.756 ; state[7]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.907      ;
+; 0.756 ; state[7]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.907      ;
+; 0.756 ; state[7]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.907      ;
+; 0.756 ; state[7]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.907      ;
+; 0.760 ; i[2]                                            ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.913      ;
+; 0.765 ; nx28524z1                                       ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 0.903      ;
+; 0.819 ; I_MED_MUX_2_reg_OUT_1_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.022      ;
+; 0.822 ; nx28524z1                                       ; i[2]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.973      ;
+; 0.825 ; I_MED_MUX_2_reg_OUT_0_                          ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.028      ;
+; 0.825 ; i[3]                                            ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.013     ; 0.964      ;
+; 0.825 ; nx28524z1                                       ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.976      ;
+; 0.830 ; nx28524z1                                       ; state[3]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; state[4]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; state[5]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; state[6]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; state[7]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; nx28524z1                                                                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; nx28524z1                                       ; state[2]                                                                 ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.982      ;
+; 0.842 ; ix57580z49990|auto_generated|altsyncram4|q_b[0] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ; CLK          ; CLK         ; 0.000        ; 0.015      ; 0.995      ;
+; 0.871 ; counter[3]                                      ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.013     ; 1.010      ;
+; 0.880 ; state[7]                                        ; reg_DSO                                                                  ; CLK          ; CLK         ; 0.000        ; -0.014     ; 1.018      ;
+; 0.883 ; counter[2]                                      ; nx56583z2                                                                ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.036      ;
+; 0.892 ; state[1]                                        ; counter[3]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; state[1]                                        ; counter[0]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; state[1]                                        ; counter[1]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.892 ; state[1]                                        ; counter[2]                                                               ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.043      ;
+; 0.894 ; ix57580z49990|auto_generated|altsyncram4|q_b[5] ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ; CLK          ; CLK         ; 0.000        ; 0.015      ; 1.047      ;
+; 0.897 ; i[2]                                            ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.049      ;
+; 0.902 ; i[2]                                            ; i[1]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.054      ;
+; 0.906 ; state[1]                                        ; i[0]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.057      ;
++-------+-------------------------------------------------+--------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                                                    ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                   ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[0]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[1]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[2]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[3]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[4]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[5]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[6]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                          ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|q_b[7]                          ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg0 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg1 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_address_reg2 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg2  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg3  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg4  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg5  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg6  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg7  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg0 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg1 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a0~portb_address_reg2 ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a1~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a1~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a2~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a2~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a3~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a3~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a4~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a4~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a5~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a5~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a6~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a6~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a7~porta_memory_reg0  ;
+; 7.873 ; 10.000       ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|altsyncram4|ram_block5a7~porta_memory_reg0  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_0_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_0_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_1_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_1_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_2_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_2_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_3_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_3_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_4_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_4_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_5_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_5_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_6_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_6_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_7_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; I_MED_MUX_2_reg_OUT_7_                                                   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; counter[0]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; counter[0]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; counter[1]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; counter[1]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; counter[2]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; counter[2]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; counter[3]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; counter[3]                                                               ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; i[0]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; i[0]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; i[1]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; i[1]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; i[2]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; i[2]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; i[3]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; i[3]                                                                     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[0]                             ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[1]                             ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|cntr1|safe_q[2]                             ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; ix57580z49990|auto_generated|dffe3a[0]                                   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; ix57580z49990|auto_generated|dffe3a[0]                                   ;
++-------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DI[*]     ; CLK        ; 2.384 ; 2.384 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; 0.338 ; 0.338 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; 2.271 ; 2.271 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; 2.265 ; 2.265 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; 2.342 ; 2.342 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; 2.384 ; 2.384 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; 2.253 ; 2.253 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; 2.332 ; 2.332 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; 2.380 ; 2.380 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; 0.820 ; 0.820 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; 0.112 ; 0.112 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DI[*]     ; CLK        ; -0.199 ; -0.199 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; -0.199 ; -0.199 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; -2.132 ; -2.132 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; -2.126 ; -2.126 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; -2.203 ; -2.203 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; -2.245 ; -2.245 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; -2.114 ; -2.114 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; -2.193 ; -2.193 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; -2.241 ; -2.241 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; -0.193 ; -0.193 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; 0.028  ; 0.028  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 3.961 ; 3.961 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 3.960 ; 3.960 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 3.949 ; 3.949 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 3.961 ; 3.961 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 3.939 ; 3.939 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 3.814 ; 3.814 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 3.818 ; 3.818 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 3.822 ; 3.822 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 3.814 ; 3.814 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 3.960 ; 3.960 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 3.949 ; 3.949 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 3.961 ; 3.961 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 3.939 ; 3.939 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 3.814 ; 3.814 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 3.818 ; 3.818 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 3.822 ; 3.822 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 13.085 ; 0.215 ; N/A      ; N/A     ; 6.933               ;
+;  CLK             ; 13.085 ; 0.215 ; N/A      ; N/A     ; 6.933               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLK             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DI[*]     ; CLK        ; 5.972 ; 5.972 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; 2.349 ; 2.349 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; 5.649 ; 5.649 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; 5.571 ; 5.571 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; 5.877 ; 5.877 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; 5.949 ; 5.949 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; 5.552 ; 5.552 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; 5.883 ; 5.883 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; 5.972 ; 5.972 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; 3.736 ; 3.736 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; 1.251 ; 1.251 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; DI[*]     ; CLK        ; -0.199 ; -0.199 ; Rise       ; CLK             ;
+;  DI[0]    ; CLK        ; -0.199 ; -0.199 ; Rise       ; CLK             ;
+;  DI[1]    ; CLK        ; -2.132 ; -2.132 ; Rise       ; CLK             ;
+;  DI[2]    ; CLK        ; -2.126 ; -2.126 ; Rise       ; CLK             ;
+;  DI[3]    ; CLK        ; -2.203 ; -2.203 ; Rise       ; CLK             ;
+;  DI[4]    ; CLK        ; -2.245 ; -2.245 ; Rise       ; CLK             ;
+;  DI[5]    ; CLK        ; -2.114 ; -2.114 ; Rise       ; CLK             ;
+;  DI[6]    ; CLK        ; -2.193 ; -2.193 ; Rise       ; CLK             ;
+;  DI[7]    ; CLK        ; -2.241 ; -2.241 ; Rise       ; CLK             ;
+; DSI       ; CLK        ; -0.193 ; -0.193 ; Rise       ; CLK             ;
+; nRST      ; CLK        ; 0.028  ; 0.028  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 8.546 ; 8.546 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 8.561 ; 8.561 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 8.564 ; 8.564 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 8.548 ; 8.548 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 8.559 ; 8.559 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 8.537 ; 8.537 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 8.159 ; 8.159 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 8.158 ; 8.158 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 8.155 ; 8.155 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; DO[*]     ; CLK        ; 3.814 ; 3.814 ; Rise       ; CLK             ;
+;  DO[0]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[1]    ; CLK        ; 3.953 ; 3.953 ; Rise       ; CLK             ;
+;  DO[2]    ; CLK        ; 3.960 ; 3.960 ; Rise       ; CLK             ;
+;  DO[3]    ; CLK        ; 3.949 ; 3.949 ; Rise       ; CLK             ;
+;  DO[4]    ; CLK        ; 3.961 ; 3.961 ; Rise       ; CLK             ;
+;  DO[5]    ; CLK        ; 3.939 ; 3.939 ; Rise       ; CLK             ;
+;  DO[6]    ; CLK        ; 3.814 ; 3.814 ; Rise       ; CLK             ;
+;  DO[7]    ; CLK        ; 3.818 ; 3.818 ; Rise       ; CLK             ;
+; DSO       ; CLK        ; 3.822 ; 3.822 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 843      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 843      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 42    ; 42   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Mon Dec 10 11:47:26 2018
+Info: Command: quartus_sta MEDIAN -c MEDIAN --do_report_timing
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (332104): Reading SDC File: 'MEDIAN_pnr_constraints.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 13.085
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    13.085         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 6.933
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     6.933         0.000 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 13.085
+    Info (332115): -to_clock [get_clocks {CLK}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is 13.085 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : I_MED_MUX_2_reg_OUT_6_
+    Info (332115): To Node      : ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1
+    Info (332115): Launch Clock : CLK
+    Info (332115): Latch Clock  : CLK
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.203      3.203  R        clock network delay
+    Info (332115):      3.507      0.304     uTco  I_MED_MUX_2_reg_OUT_6_
+    Info (332115):      3.507      0.000 RR  CELL  I_MED_MUX_2_reg_OUT_6_|regout
+    Info (332115):      5.493      1.986 RR    IC  I_MED_I_MCE_rtlc0_38_gt_0_ix57580z52928|datab
+    Info (332115):      6.089      0.596 RR  CELL  I_MED_I_MCE_rtlc0_38_gt_0_ix57580z52928|cout
+    Info (332115):      6.089      0.000 RR    IC  I_MED_I_MCE_rtlc0_38_gt_0_ix57580z52926|cin
+    Info (332115):      6.595      0.506 RR  CELL  I_MED_I_MCE_rtlc0_38_gt_0_ix57580z52926|combout
+    Info (332115):      7.229      0.634 RR    IC  ix57580z52946|datab
+    Info (332115):      7.853      0.624 RR  CELL  ix57580z52946|combout
+    Info (332115):      8.213      0.360 RR    IC  ix57580z52945|datab
+    Info (332115):      8.837      0.624 RR  CELL  ix57580z52945|combout
+    Info (332115):     10.041      1.204 RR    IC  ix57580z49990|auto_generated|altsyncram4|ram_block5a0|portadatain[1]
+    Info (332115):     10.169      0.128 RR  CELL  ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     20.000     20.000           latch edge time
+    Info (332115):     23.300      3.300  R        clock network delay
+    Info (332115):     23.254     -0.046     uTsu  ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg1
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    10.169
+    Info (332115): Data Required Time :    23.254
+    Info (332115): Slack              :    13.085 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.499
+    Info (332115): -to_clock [get_clocks {CLK}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.499 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : i[0]
+    Info (332115): To Node      : i[0]
+    Info (332115): Launch Clock : CLK
+    Info (332115): Latch Clock  : CLK
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.216      3.216  R        clock network delay
+    Info (332115):      3.520      0.304     uTco  i[0]
+    Info (332115):      3.520      0.000 FF  CELL  modgen_counter_i_reg_q_0_|regout
+    Info (332115):      3.520      0.000 FF    IC  ix23427z52923|datac
+    Info (332115):      3.913      0.393 FR  CELL  ix23427z52923|combout
+    Info (332115):      3.913      0.000 RR    IC  modgen_counter_i_reg_q_0_|datain
+    Info (332115):      4.021      0.108 RR  CELL  i[0]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      3.216      3.216  R        clock network delay
+    Info (332115):      3.522      0.306      uTh  i[0]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.021
+    Info (332115): Data Required Time :     3.522
+    Info (332115): Slack              :     0.499 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332113): Report Minimum Pulse Width: Found 1 results (0 violated).  Worst case slack is 6.933
+    Info (332113): Targets: [get_clocks {CLK}]
+    Info (332113): -nworst: 1
+    Info (332113): -detail: full_path
+Info (332113): Path #1: slack is 6.933 
+    Info (332113): ===================================================================
+    Info (332113): Node             : ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): Clock            : CLK
+    Info (332113): Type             : High Pulse Width
+    Info (332113): 
+    Info (332113): Late Clock Arrival Path:
+    Info (332113): 
+    Info (332113): Total (ns)  Incr (ns)     Type  Element
+    Info (332113): ==========  ========= ==  ====  ===================================
+    Info (332113):      0.000      0.000           launch edge time
+    Info (332113):      0.000      0.000           source latency
+    Info (332113):      0.000      0.000           CLK
+    Info (332113):      1.110      1.110 RR  CELL  CLK|combout
+    Info (332113):      1.349      0.239 RR    IC  CLK~clkctrl|inclk[0]
+    Info (332113):      1.349      0.000 RR  CELL  CLK~clkctrl|outclk
+    Info (332113):      2.466      1.117 RR    IC  ix57580z49990|auto_generated|altsyncram4|ram_block5a0|clk1
+    Info (332113):      3.287      0.821 RR  CELL  ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): 
+    Info (332113): Early Clock Arrival Path:
+    Info (332113): 
+    Info (332113): Total (ns)  Incr (ns)     Type  Element
+    Info (332113): ==========  ========= ==  ====  ===================================
+    Info (332113):     10.000     10.000           launch edge time
+    Info (332113):     10.000      0.000           source latency
+    Info (332113):     10.000      0.000           CLK
+    Info (332113):     11.110      1.110 FF  CELL  CLK|combout
+    Info (332113):     11.349      0.239 FF    IC  CLK~clkctrl|inclk[0]
+    Info (332113):     11.349      0.000 FF  CELL  CLK~clkctrl|outclk
+    Info (332113):     12.466      1.117 FF    IC  ix57580z49990|auto_generated|altsyncram4|ram_block5a0|clk1
+    Info (332113):     13.287      0.821 FF  CELL  ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): 
+    Info (332113): Required Width   :     3.067
+    Info (332113): Actual Width     :    10.000
+    Info (332113): Slack            :     6.933
+    Info (332113): ===================================================================
+    Info (332113): 
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 17.540
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    17.540         0.000 CLK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.873
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     7.873         0.000 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 17.540
+    Info (332115): -to_clock [get_clocks {CLK}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is 17.540 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0
+    Info (332115): To Node      : ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0
+    Info (332115): Launch Clock : CLK
+    Info (332115): Latch Clock  : CLK
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      1.713      1.713  R        clock network delay
+    Info (332115):      1.835      0.122     uTco  ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_datain_reg0
+    Info (332115):      4.155      2.320 RR  CELL  ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     20.000     20.000           latch edge time
+    Info (332115):     21.696      1.696  R        clock network delay
+    Info (332115):     21.695     -0.001     uTsu  ix57580z49990|auto_generated|altsyncram4|ram_block5a0~porta_memory_reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.155
+    Info (332115): Data Required Time :    21.695
+    Info (332115): Slack              :    17.540 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.215
+    Info (332115): -to_clock [get_clocks {CLK}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.215 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : i[0]
+    Info (332115): To Node      : i[0]
+    Info (332115): Launch Clock : CLK
+    Info (332115): Latch Clock  : CLK
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      1.660      1.660  R        clock network delay
+    Info (332115):      1.801      0.141     uTco  i[0]
+    Info (332115):      1.801      0.000 FF  CELL  modgen_counter_i_reg_q_0_|regout
+    Info (332115):      1.801      0.000 FF    IC  ix23427z52923|datac
+    Info (332115):      1.985      0.184 FR  CELL  ix23427z52923|combout
+    Info (332115):      1.985      0.000 RR    IC  modgen_counter_i_reg_q_0_|datain
+    Info (332115):      2.027      0.042 RR  CELL  i[0]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      1.660      1.660  R        clock network delay
+    Info (332115):      1.812      0.152      uTh  i[0]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     2.027
+    Info (332115): Data Required Time :     1.812
+    Info (332115): Slack              :     0.215 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332113): Report Minimum Pulse Width: Found 1 results (0 violated).  Worst case slack is 7.873
+    Info (332113): Targets: [get_clocks {CLK}]
+    Info (332113): -nworst: 1
+    Info (332113): -detail: full_path
+Info (332113): Path #1: slack is 7.873 
+    Info (332113): ===================================================================
+    Info (332113): Node             : ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): Clock            : CLK
+    Info (332113): Type             : High Pulse Width
+    Info (332113): 
+    Info (332113): Late Clock Arrival Path:
+    Info (332113): 
+    Info (332113): Total (ns)  Incr (ns)     Type  Element
+    Info (332113): ==========  ========= ==  ====  ===================================
+    Info (332113):      0.000      0.000           launch edge time
+    Info (332113):      0.000      0.000           source latency
+    Info (332113):      0.000      0.000           CLK
+    Info (332113):      0.581      0.581 RR  CELL  CLK|combout
+    Info (332113):      0.652      0.071 RR    IC  CLK~clkctrl|inclk[0]
+    Info (332113):      0.652      0.000 RR  CELL  CLK~clkctrl|outclk
+    Info (332113):      1.287      0.635 RR    IC  ix57580z49990|auto_generated|altsyncram4|ram_block5a0|clk1
+    Info (332113):      1.698      0.411 RR  CELL  ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): 
+    Info (332113): Early Clock Arrival Path:
+    Info (332113): 
+    Info (332113): Total (ns)  Incr (ns)     Type  Element
+    Info (332113): ==========  ========= ==  ====  ===================================
+    Info (332113):     10.000     10.000           launch edge time
+    Info (332113):     10.000      0.000           source latency
+    Info (332113):     10.000      0.000           CLK
+    Info (332113):     10.581      0.581 FF  CELL  CLK|combout
+    Info (332113):     10.652      0.071 FF    IC  CLK~clkctrl|inclk[0]
+    Info (332113):     10.652      0.000 FF  CELL  CLK~clkctrl|outclk
+    Info (332113):     11.287      0.635 FF    IC  ix57580z49990|auto_generated|altsyncram4|ram_block5a0|clk1
+    Info (332113):     11.698      0.411 FF  CELL  ix57580z49990|auto_generated|altsyncram4|q_b[0]
+    Info (332113): 
+    Info (332113): Required Width   :     2.127
+    Info (332113): Actual Width     :    10.000
+    Info (332113): Slack            :     7.873
+    Info (332113): ===================================================================
+    Info (332113): 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 532 megabytes
+    Info: Processing ended: Mon Dec 10 11:47:28 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

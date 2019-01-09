@@ -1,0 +1,71 @@
+# Info: [9569]: Logging project transcript to file /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/precision.log
+# Info: [9569]: Logging suppressed messages transcript to file /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/precision.log.suppressed
+# Info: [9552]: Activated implementation MED in project /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.psp.
+# Info: [15300]: Setting up the design to use synthesis library "cycloneii.syn"
+# Info: [579]: The global max fanout is currently set to 1000 for Altera - Cyclone II.
+# Info: [15326]: Setting Part to: "EP2C35F672C".
+# Info: [15327]: Setting Process to: "8".
+# Info: [3022]: Reading file: /comelec/softs/opt/mentor/precision/current/Mgc_home/pkgs/psr/techlibs/cycloneii.syn.
+# Info: [638]: Loading library initialization file /comelec/softs/opt/mentor/precision/current/Mgc_home/pkgs/psr/userware/yeager_rename.tcl
+# Info: [623]: Vendor library directory /comelec/softs/opt/altera/altera13.0sp1/quartus/eda/synthesis was not found. Vendor library directory /comelec/softs/opt/altera/altera13.0sp1/quartus/eda/sim_lib contains simulation RTL constructs that cannot be processed by Precision. Reading the pre-compiled version
+# Info: [40000]: hdl-analyze, Release RTLC-Precision 2017a.11
+# Info: [42003]: Starting analysis of files in library "work"
+# Info: [41002]: Analyzing input file "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MCE.sv" ...
+# Info: [41002]: Analyzing input file "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv" ...
+# Info: [41002]: Analyzing input file "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MUX.sv" ...
+# Info: [661]: Current working directory: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.
+# Info: [40000]: RTLC-Driver, Release RTLC-Precision 2017a.11
+# Info: [40000]: Last compiled on Sep 15 2017 12:39:55
+# Info: [44512]: Initializing...
+# Info: [44504]: Partitioning design ....
+# Info: [40000]: RTLCompiler, Release RTLC-Precision 2017a.11
+# Info: [40000]: Last compiled on Sep 15 2017 06:47:50
+# Info: [44512]: Initializing...
+# Info: [44506]: Module MUX: Pre-processing...
+# Info: [44506]: Module MCE: Pre-processing...
+# Info: [44522]: Root Module MED: Pre-processing...
+# Info: [44508]: Module MUX: Compiling...
+# Info: [44508]: Module MCE: Compiling...
+# Info: [44523]: Root Module MED: Compiling...
+# Info: [44842]: Compilation successfully completed.
+# Info: [44856]: Total lines of RTL compiled: 67.
+# Info: [44835]: Total CPU time for compilation: 0.0 secs.
+# Info: [44513]: Overall running time for compilation: 1.0 secs.
+# Info: [661]: Current working directory: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.
+# Info: [15332]: Doing rtl optimizations.
+# Info: [664]: Finished compiling design.
+# Info: [661]: Current working directory: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.
+# Info: [4558]: instance:MUX_1 Instance is flattened in hierarchical block view:.work.MED.INTERFACE.
+# Info: [4558]: instance:MUX_2 Instance is flattened in hierarchical block view:.work.MED.INTERFACE.
+# Info: [4558]: instance:I_MCE Instance is flattened in hierarchical block view:.work.MED.INTERFACE.
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_0' of type 'cell:shiftregister_reg_R(7)(7)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_1' of type 'cell:shiftregister_reg_R(7)(6)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_2' of type 'cell:shiftregister_reg_R(7)(5)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_3' of type 'cell:shiftregister_reg_R(7)(4)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_4' of type 'cell:shiftregister_reg_R(7)(3)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_5' of type 'cell:shiftregister_reg_R(7)(2)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_6' of type 'cell:shiftregister_reg_R(7)(1)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9032]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register Instance 'instance:MED_sr_7' of type 'cell:shiftregister_reg_R(7)(0)_clk_reset_set_0_1_1_1_0_8_0'
+# Info: [9033]: "/cal/homes/bwamba/Desktop/SE204/median/synthese/../src/MED.sv", line 15: : Inferred shift register with taps Instance 'instance:MED_sr_tap_0' of type 'cell:shiftregister_with_taps_8_8_1'
+# Info: [20013]: Precision will use 4 processor(s).
+# Info: [9033]:  : Inferred shift register with taps Instance 'instance:MED_sr_tap_0.shiftregister_with_taps_8_8_1_sr_tap_0' of type 'cell:shiftregister_with_taps_8_8_1_0'
+# Info: [15002]: Optimizing design view:.work.MED.INTERFACE
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.edf.
+# Info: Info, Writing xrf file '/cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.xrf'
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.xrf.
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.v.
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.xrf.
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.vqm.
+# Info: [3027]: Writing file: /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.xrf.
+# Info: -- Writing file /cal/homes/bwamba/Desktop/SE204/median/synthese/MED/MED.tcl
+# Info: exq_pr_compile_project gen_vcf MED 1
+# Info: [12045]: Starting timing reports generation...
+# Info: [12046]: Timing reports generation done.
+# Info: [12048]: POST-SYNTHESIS TIMING REPORTS ARE ESTIMATES AND SHOULD NOT BE RELIED ON TO MAKE QoR DECISIONS. For accurate timing information, please run place-and-route (P&R) and review P&R generated timing reports.
+# Info: [664]: Finished synthesizing design.
+# Info: [11019]: Total CPU time for synthesis: 0.7 s secs.
+# Info: [11020]: Overall running time for synthesis: 1.6 s secs.
+# Info: [9565]: Saved implementation MED in project /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.psp.
+# Info: [9565]: Saved implementation MED in project /cal/homes/bwamba/Desktop/SE204/median/synthese/MED.psp.
+dofile synthesis.tcl
+# COMMAND: exit -force

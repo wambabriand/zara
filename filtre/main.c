@@ -16,16 +16,21 @@ int main(int argc , char **argv)
 	}
 
 
-	out = fopen("out.txt","r");
+	out = fopen("out.txt","w");
 	if(out==NULL){
 		printf("impossible cree le file out.txt \n");
 		return -1;
 	}
 
 
-	while( fscanf (fp,"%d %s (%s) %d %s ",tmp1, name, sex, tmp2, sex ) !=EOF  ){
+	while( fscanf (in,"%d %s %s %d %s ",&tmp1, name, sex, &tmp2, sex2 ) !=EOF  ){
+		//printf( "%d %s %s %d %s \n",tmp1, name, sex, tmp2, sex2);
 
-		fprintf( out,"%s",name);
+	if(strlen(name)>6 &&strlen(name) <11 )		
+		{	fprintf( out,"%s \n",name);
+			printf( "%s \n",name);
+
+		}
 	}
 
 	return 0;

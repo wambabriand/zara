@@ -1,0 +1,62 @@
+
+
+
+#top{ 
+ background-color: #0336ff; 
+ padding:20px ; 
+ text-align: center;
+}
+
+
+body {
+    font-family: "Lato", sans-serif;    /*type d ecriture*/
+    background-color: lightblue;
+}
+
+
+.menu {
+    height: 100%;          /*hauteur*/
+    width: 20%;			/*largeur*/
+    position: fixed;		
+    z-index: 1;             /*permet de donner l ordre d affichage des element d un bloc , permet aussi la superposition d'un bloc sur un autr*/
+    top: 0;              /* distance parraport au bloc du haut*/
+    left: 0;
+    background-color: #111;	
+    overflow-x: hidden;            /* quand le texte dans le box depasse que faire? (scroll) mettre une bare pour defile ou hiden ou visible */
+    padding-top: 20px;		/* cree una mage entre le text le bloc (cadre)*/
+}
+
+.menu a {
+    padding: 6px 8px 6px 16px;  /* left top right bootom*/
+    text-decoration: none;
+    font-size: 25px;           /* increase dimension of char*/
+    color: #818181;
+    display: block;		/*il se comporte comme element de bloque c est a dire il vont a la ligne */
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+}
+.user {
+    margin-left: 20%; /* pour ne  plus centre les segment dans la page user*/
+}
+
+.main {
+    margin-left: 20%; /* recule le main de 20% */
+    font-size: 16px; /* Increased text to eable scrolling */
+    padding: 0px 10px; /* distance d un bloc a un autre*/
+ text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+    .menu {padding-top: 15px;}
+    .menu a {font-size: 15px;}
+}
+
+.error 
+{ 
+	color: #FF0000;
+}
+
+
+

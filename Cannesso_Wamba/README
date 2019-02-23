@@ -1,46 +1,61 @@
-Ce fichier est libre et simule l attaque par la rainbow taible
+/*
+################################################
+## Fait par Angelo Cannesso et Briand Wamba   ##
+## Ce fichier sera optimiser avec le temps    ##
+##  Il est totalement libre d'utilisation     ##
+##   	Prof. Ahmed Roshenid                  ##
+##   	Group Télecom Paristech  	      ##
+##     bwamba@telecom-paristech.fr            ##
+##   angelo.cannesso@telecom-paristech.fr     ##
+################################################
+*/
 
 
-avancer de Lancer le programme il faut modifier trois variables dans le file MY_LIB.H 
+Ce fichier est libre d'utilisation. L'utilisateur est responsable des effets.
 
 
-password = cette variable doit contenir le hash(en Hex)  du mot de pass que tu veux trouver.
- 
-data_base = cette variable doit contenir le path de la base de donné ( hash des passwords)
+Il met en pratique l'attaque par rainbow table.
 
-data_base_claire = cette variable doit contenir le path de la base de donné ( passwords en clair)
+Il dispose d'une Rainbow Table deja crée, Vous pouvez donc l'utiliser directement.
 
+si vous voulez, vous pouvez personaliser votre table à parti d'un fichier de mot de pass.
 
-NB: il faut etre sur que le mot de pass que vous voulez cassé a été chiffré avec sha256
-
-pour le verifier 
-
-1- creer un compte dans l'application qui fait le chiffrement (choisiser comme mot de pass 
-angelo ou briand , car ces mots de pass existent dans notre base de donnée)
-
-2- sniffer le chiffré de votre propre mot de pass 
-
-3- utiliser ce programme pour le dechiffrer 
-
-4- si ce programme reussi alors l'application utilise sha256 pour faire le chiffrement
-
-vous pouvez continuer votre attaque.
+je vous expliquerai comment faire l'attaque en utilisant notre table et en creant votre propre table
 
 
 
-Comment il fonctione :
+*******  Craquer en utilisant la rainbow table deja existante *******
 
-1-) cree le hash de  la base de donnée
-     make builder_table 
+placer vous dans le dossier cannesso_wamba, ouvrir un terminal, et lancer l'application grace a la commande :
 
-il faut ouvrir le fichier MY_LIB.H et modifier le path des de la base de donnée
- 
+./crack_sha256 hash
 
-nous avons mis a disposition un filtre qui est facilement modifiable en fin que chacun 
-puisse cree sa propro base de donne
+hash etant une chaine de 62  caractères, que nous voulons craquer.
 
 
-2-) lancer le program main avec la commande :
-	make run 
+*******  Craquer en creant votre propre base de donnée *******
+
+vous devez disposer d'un fichier contenant les mots de pass en claire.
+
+positioner le fichier dans le dossier base_donne 
+
+renommer le comme "mot_pass_clair" et assurer vous qu'il soit de type ".txt"
+
+placer vous dans le dossier cannesso_wamba, ouvrir un terminal, et lancer l'application grace a la commande :
+
+./create_rainbowTable
+
+vous verrez des messages DEBUT DE LA CREATION DE LA BASE ...  FIN DE LA CREATION.
+
+vous pouvez directement casser votre mot de pass en utilisant 
+
+./crack_sha256 hash
+.
+hash etant une chaine de 62  caractères, que nous voulons craquer.
+
+
+
+
+
 
 

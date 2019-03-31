@@ -1,7 +1,3 @@
-t totalement d'utilisation           ##
-##   	Prof. Ahmed Roshenid                  ##
-##   	Group Télecom Paristech               ##
-################################################
 
 
 #include <iostream>

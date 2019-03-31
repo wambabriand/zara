@@ -1,16 +1,5 @@
 
 
-/*
-################################################
-## Fait par Angelo Cannesso et Briand Wamba   ##
-## Ce fichier sera optimiser avec le temps    ##
-##  Il est totalement libre d'utilisation     ##
-##   	Prof. Ahmed Roshenid                  ##
-##   	Group Télecom Paristech  	      ##
-##     bwamba@telecom-paristech.fr            ##
-##    acannesso@telecom-paristech.fr          ##
-################################################
-*/
 
 
 
